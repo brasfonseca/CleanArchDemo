@@ -17,6 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArch.Mvc", "CleanArch.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.Domain", "CleanArch.Domain\CleanArch.Domain.csproj", "{0B39C61F-E0C2-4BE0-8F51-A121DC8937F4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{308B1769-C43B-4706-B9C6-D3F37581FA26}"
+	ProjectSection(SolutionItems) = preProject
+		Course.cs = Course.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +43,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6397018D-8CCD-4F31-A897-93A211D77211} = {E57714C8-958D-4D8B-89A8-F6D64A77F3E9}
 		{0B39C61F-E0C2-4BE0-8F51-A121DC8937F4} = {E77E05B8-5395-453B-A9F4-8DA131336444}
+		{308B1769-C43B-4706-B9C6-D3F37581FA26} = {E77E05B8-5395-453B-A9F4-8DA131336444}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A318002E-C124-4C72-940A-EA635D2955FD}
