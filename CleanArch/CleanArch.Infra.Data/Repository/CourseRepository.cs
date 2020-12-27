@@ -15,6 +15,12 @@ namespace CleanArch.Infra.Data.Repository
         {
             _ctx = ctx;
         }
+
+        public void Add(Course course)
+        {   
+            _ctx.Courses.Add(course);
+        }
+
         public IEnumerable<Course> GetCourses()
         {
             return _ctx.Courses;
