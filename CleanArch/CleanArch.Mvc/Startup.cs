@@ -31,7 +31,11 @@ namespace CleanArch.Mvc
 
             services.AddDbContext<UniversityDBContext>(options =>
                options.UseSqlServer(
-                    Configuration.GetConnectionString("UniversityDBConnection")));        
+                    Configuration.GetConnectionString("UniversityDBConnection")));
+
+            services.AddDbContext<VerboDBContext>(options =>
+               options.UseSqlServer(
+                    Configuration.GetConnectionString("VerboDBConnection")));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 

@@ -35,6 +35,10 @@ namespace CleanArch.Api
                options.UseSqlServer(
                     Configuration.GetConnectionString("UniversityDBConnection")));
 
+            services.AddDbContext<VerboDBContext>(options =>
+               options.UseSqlServer(
+                    Configuration.GetConnectionString("VerboDBConnection")));
+
             services.AddMediatR(typeof(Startup));
             services.RegisterAutoMapper();
 ;            
