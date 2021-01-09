@@ -18,28 +18,41 @@ namespace CleanArch.Infra.Data.Migrations.VerboDB
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
-            modelBuilder.Entity("CleanArch.Domain.Models.TParoquiaComunidade", b =>
+            modelBuilder.Entity("CleanArch.Domain.Models.TCity", b =>
+                {
+                    b.Property<short>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("smallint")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("City")
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TCity");
+                });
+
+            modelBuilder.Entity("CleanArch.Domain.Models.TParishCommunity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<short>("Cidade")
+                    b.Property<short>("City")
                         .HasColumnType("smallint");
 
                     b.Property<string>("Email")
                         .HasMaxLength(150)
                         .HasColumnType("varchar(150)");
 
-                    b.Property<short>("Estado")
-                        .HasColumnType("smallint");
-
-                    b.Property<string>("Nome")
+                    b.Property<string>("Name")
                         .HasMaxLength(200)
                         .HasColumnType("varchar(200)");
 
-                    b.Property<string>("Responsavel")
+                    b.Property<string>("Responsible")
                         .HasMaxLength(200)
                         .HasColumnType("varchar(200)");
 
@@ -47,13 +60,32 @@ namespace CleanArch.Infra.Data.Migrations.VerboDB
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
+                    b.Property<short>("State")
+                        .HasColumnType("smallint");
+
                     b.Property<string>("Telefone")
                         .HasMaxLength(20)
                         .HasColumnType("varchar(20)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("TParoquiaComunidades");
+                    b.ToTable("TParishCommunity");
+                });
+
+            modelBuilder.Entity("CleanArch.Domain.Models.TState", b =>
+                {
+                    b.Property<short>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("smallint")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("State")
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TState");
                 });
 #pragma warning restore 612, 618
         }

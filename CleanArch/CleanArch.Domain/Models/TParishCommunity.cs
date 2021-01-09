@@ -3,17 +3,26 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CleanArch.Domain.Models
 {
-    public class TParoquiaComunidade
+    /// <summary>
+    /// Parish = Paróquia
+    /// Community = Comunidade
+    /// Name = Nome
+    /// Responsible = Responsável
+    /// Telephone = Telefone
+    /// City = Cidade
+    /// State = Estado
+    /// </summary>            
+    public class TParishCommunity
     {
         public int Id { get; set; }
         
         [Column(TypeName = "varchar")]
         [StringLength(200)]
-        public string Nome { get; set; }
+        public string Name { get; set; }
 
         [Column(TypeName = "varchar")]
         [StringLength(200)]
-        public string Responsavel { get; set; }
+        public string Responsible { get; set; }
         
         [Column(TypeName = "varchar")]
         [StringLength(100)]
@@ -26,7 +35,7 @@ namespace CleanArch.Domain.Models
         [Column(TypeName = "varchar")]
         [StringLength(20)]
         public string Telefone { get; set; }
-        public short Cidade { get; set; }
-        public short Estado { get; set; }
+        public short City { get; set; }
+        public short State { get; set; }
     }
 }
